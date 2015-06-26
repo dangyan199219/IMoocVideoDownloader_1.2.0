@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements OnRefreshListener {
 
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
 		swipeRefreshLayout.setOnRefreshListener(this);
-		// setColorScheme()已经弃用，使用setColorSchemeResources()来设置颜色
+		// setColorScheme()已经弃用，setColorSchemeResources()
 		swipeRefreshLayout.setColorSchemeResources(
 				android.R.color.holo_blue_bright,
 				android.R.color.holo_green_light,
@@ -61,13 +61,8 @@ public class MainActivity extends Activity implements OnRefreshListener {
 				android.R.color.holo_red_light);
 
 		progressDialog = new ProgressDialog(this);
-<<<<<<< HEAD
 		progressDialog.setTitle("Tips");
-		progressDialog.setMessage("��������...");
-=======
-		progressDialog.setTitle("提示");
-		progressDialog.setMessage("正在下载");
->>>>>>> origin/master
+		progressDialog.setMessage("正在下载...");
 
 		new GetCourseTask(this).execute(CommonURL.COURSE_LIST_URL + i);
 	}
