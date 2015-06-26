@@ -62,7 +62,7 @@ public class MainActivity extends Activity implements OnRefreshListener {
 
 		progressDialog = new ProgressDialog(this);
 		progressDialog.setTitle("Tips");
-		progressDialog.setMessage("正在下载");
+		progressDialog.setMessage("正在下载...");
 
 		new GetCourseTask(this).execute(CommonURL.COURSE_LIST_URL + i);
 	}
