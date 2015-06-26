@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements OnRefreshListener {
 
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe);
 		swipeRefreshLayout.setOnRefreshListener(this);
-		// setColorScheme()ÒÑ¾­ÆúÓÃ£¬Ê¹ÓÃsetColorSchemeResources()À´ÉèÖÃÑÕÉ«
+		// setColorScheme()å·²ç»å¼ƒç”¨ï¼Œä½¿ç”¨setColorSchemeResources()æ¥è®¾ç½®é¢œè‰²
 		swipeRefreshLayout.setColorSchemeResources(
 				android.R.color.holo_blue_bright,
 				android.R.color.holo_green_light,
@@ -61,8 +61,8 @@ public class MainActivity extends Activity implements OnRefreshListener {
 				android.R.color.holo_red_light);
 
 		progressDialog = new ProgressDialog(this);
-		progressDialog.setTitle("Tips");
-		progressDialog.setMessage("ÕıÔÚÏÂÔØ");
+		progressDialog.setTitle("æç¤º");
+		progressDialog.setMessage("æ­£åœ¨ä¸‹è½½");
 
 		new GetCourseTask(this).execute(CommonURL.COURSE_LIST_URL + i);
 	}
